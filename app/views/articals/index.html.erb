@@ -1,0 +1,19 @@
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th colspan="2"></th>
+  </tr>
+
+  <% @articals.each do |artical| %>
+  <tr>
+    <td><%= artical.title %></td>
+    <td><%= artical.text %></td>
+
+    <td><%= link_to 'Show', artical_path(artical) %></td>
+    <td><%= link_to 'Edit', edit_artical_path(artical) %></td>
+    <td><%= link_to 'Destroy', artical_path(artical),method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+  <% end %>
+</table>
